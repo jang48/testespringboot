@@ -1,0 +1,31 @@
+body, ul, li {
+    padding : 0;
+    margin : 0;
+    text-style : none;
+}
+
+total-wrap{
+    background-color : green;
+}
+
+.logo {
+    background-color : yellow;
+}
+
+.content-wrap{
+    background-color : blue;
+    display:flex;
+}
+
+.side-title{
+    background-color : orange;
+    width: 10%;
+    height : 500px;
+    text-align : center;
+}
+
+.content{
+    background-color : lightblue;
+    width: 90%;
+    height : 500px;
+}

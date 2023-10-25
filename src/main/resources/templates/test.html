@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/test.css">
+</head>
+<body>
+<div class="total-wrap"></div>
+    <div class="logo">logo</div>
+    <div class="content-wrap">
+        <div class="side-title">
+            <ul>
+                <li th:each="titleList : ${articles}"  >
+                <a href="@{|/detail/${titleList.id}|}" th:text="${titleList.title}"> </a>
+                </li>
+            </ul>
+            <form method="get" action="/add">
+                <input  type="submit" value="추가">
+            </form>
+        </div>
+        <div class="content">
+            <form action="/update" method="post">
+<!--                <input type="text" name="id" th:value="${articleList.id}">-->
+                <div>
+                    <input type="text" name="title" th:value="${articleList.title}">
+                </div>
+                <div>
+                    <textarea name="content" cols="35" rows="15" th:text="${articleList.content}"></textarea>
+                </div>
+                <input type="submit" value="저장">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
